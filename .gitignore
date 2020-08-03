@@ -67,3 +67,6 @@ bld/
 
 # Ignore the Models Builder models out of date flag
 **/App_Data/Models/ood.flag
+
+# Custom
+!Our.Umbraco.Domains/App_Data/Umbraco.sdf
