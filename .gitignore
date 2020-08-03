@@ -5,6 +5,11 @@
 # Note: VisualStudio gitignore rules may also be relevant
 
 Umbraco/
+nuget.exe
+.vs/
+snapshots/
+App_Browsers/
+App_Data/
 
 # User-specific files
 *.rsuser
