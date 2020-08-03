@@ -4,6 +4,8 @@
 
 # Note: VisualStudio gitignore rules may also be relevant
 
+Umbraco/
+
 # User-specific files
 *.rsuser
 *.suo
