@@ -1,0 +1,55 @@
+﻿<div ng-controller="Domains.DashboardController as vm">
+
+    <umb-editor-view footer="false">
+
+        <umb-editor-header name="vm.page.name"
+                           name-locked="true"
+                           hide-icon="true"
+                           hide-description="true"
+                           hide-alias="true">
+        </umb-editor-header>
+
+        <umb-editor-container>
+
+            <umb-load-indicator ng-if="vm.loading"></umb-load-indicator>
+
+
+            <table class="table table-hover" ng-if="!vm.loading">
+                <thead>
+                <tr>
+                    <th><localize key="default_domain">Domain</localize></th>
+                    <th><lolalize key="default_node">Node</lolalize></th>
+                    <th><localize key="default_culture">Culture</localize></th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="domain in vm.domains track by domain.id">
+                    <td>
+                        <i class="icon-globe-alt" style="color: #BBBABF; margin-right: 5px;"></i>
+                        <span>{{ domain.domainName }}</span>
+                    </td>
+                    <td>
+                        <span><a ng-click="vm.navigate(domain.content.id)">{{ domain.content.name}}</a></span>
+                    </td>
+                    <td>
+                        <span>{{ domain.languageIsoCode}}</span>
+                    </td>
+                    <td style="text-align: right;">
+                        <umb-button type="button"
+                                    size="xxs"
+                                    button-style="danger"
+                                    state="domain.deleteButtonState"
+                                    action="vm.deleteDomain(domain, $event)"
+                                    label-key="general_delete">
+                        </umb-button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </umb-editor-container>
+
+    </umb-editor-view>
+
+</div>

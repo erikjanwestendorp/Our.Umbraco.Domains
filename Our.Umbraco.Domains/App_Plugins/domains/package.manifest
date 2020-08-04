@@ -1,0 +1,12 @@
+﻿{
+  "$schema": "http://json.schemastore.org/package.manifest",
+
+  "javascript": [
+
+    //Controllers 
+    "~/App_Plugins/domains/backoffice/domains/dashboard.controller.js",
+
+    //Resources
+    "~/App_Plugins/domains/resources/domain.resource.js"
+  ]
+}
