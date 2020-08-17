@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Our.Umbraco.Domains</id>
+    <version>1.0.1</version>
+    <authors>Erik-Jan Westendorp</authors>
+    <owners>Erik-Jan Westendorp</owners>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/erikjanwestendorp/Our.Umbraco.Domains</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This package gives you an easy overview of the domains used within your Umbraco installation. It also gives the possibility to remove domain names. The package is very useful for Umbraco instances with multiple websites.</description>
+    <copyright>Copyright 2020</copyright>
+    <tags>umbraco, umbraco-cms</tags>
+    <releaseNotes />
+  </metadata>
+  <files>
+    <file src="bin\release\Our.Umbraco.Domains.Core.dll" target="lib\net472" />
+    <file src="App_Plugins\domains\**\*.*" target="content\App_Plugins\domains" />
+  </files>
+</package>
