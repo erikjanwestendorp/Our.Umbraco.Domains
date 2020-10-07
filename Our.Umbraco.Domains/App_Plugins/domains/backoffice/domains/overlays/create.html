@@ -19,6 +19,17 @@
                                ng-model="vm.hostname" />
                     </umb-control-group>
 
+                    <umb-control-group label="Node">
+                        <umb-tree section="content"
+                                  hideheader="true"
+                                  hideoptions="true"
+                                  api="vm.dialogTreeApi"
+                                  on-init="vm.onTreeInit()"
+                                  enablelistviewexpand="true"
+                                  isdialog="true"
+                                  enablecheckboxes="true">
+                        </umb-tree>
+                    </umb-control-group>
                 </umb-box-content>
             </umb-box>
         </umb-editor-container>
