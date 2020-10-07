@@ -11,6 +11,9 @@
         vm.node = null;
         vm.language = null;
 
+        vm.save = save;
+        vm.close = close;
+
         vm.dialogTreeApi = {};
 
         vm.onTreeInit = function () {
@@ -31,6 +34,32 @@
             vm.node = args.node;
             vm.node.selected = true;
         };
+
+        function save() {
+            var data = {
+                nodeId: vm.node.id,
+                domains: [
+                    {
+                        name: vm.hostname,
+                        lang: vm.language.id
+                    }
+                ]
+            };
+
+            contentResource.saveLanguageAndDomains(data)
+                .then(function (response) {
+                    if (!response.valid) {
+                        alert('Oops!');
+                    } else {
+                        $scope.model.submit();
+                    }
+                });
+        };
+
+        function close() {
+            $scope.model.close();
+        };
+
         function init() {
             languageResource.getAll()
                 .then(function (languages) {
