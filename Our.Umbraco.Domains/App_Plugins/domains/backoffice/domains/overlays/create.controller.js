@@ -5,6 +5,7 @@
 
         var vm = this;
 
+        vm.hostname = null;
     }
 
     angular.module('umbraco')

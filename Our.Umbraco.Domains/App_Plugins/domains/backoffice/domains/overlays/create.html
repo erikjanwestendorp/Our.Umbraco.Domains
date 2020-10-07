@@ -2,6 +2,26 @@
 
     <umb-editor-view>
 
+        <umb-editor-header name="'Add Domain'"
+                           name-locked="true"
+                           hide-alias="true"
+                           hide-icon="true"
+                           hide-description="true">
+        </umb-editor-header>
+
+        <umb-editor-container>
+            <umb-box>
+                <umb-box-content>
+
+                    <umb-control-group label="Hostname">
+                        <input type="text"
+                               class="umb-property-editor umb-textstring"
+                               ng-model="vm.hostname" />
+                    </umb-control-group>
+
+                </umb-box-content>
+            </umb-box>
+        </umb-editor-container>
     </umb-editor-view>
 
 </div>
