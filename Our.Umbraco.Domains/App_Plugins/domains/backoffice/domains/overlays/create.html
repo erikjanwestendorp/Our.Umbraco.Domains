@@ -30,6 +30,15 @@
                                   enablecheckboxes="true">
                         </umb-tree>
                     </umb-control-group>
+
+                    <umb-control-group label="Language">
+                        <select name="language"
+                                ng-model="vm.language"
+                                ng-options="lang.name for lang in vm.languages"
+                                required>
+                        </select>
+                    </umb-control-group>
+
                 </umb-box-content>
             </umb-box>
         </umb-editor-container>

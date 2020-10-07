@@ -5,8 +5,12 @@
 
         var vm = this;
 
+        vm.languages = [];
+
         vm.hostname = null;
         vm.node = null;
+        vm.language = null;
+
         vm.dialogTreeApi = {};
 
         vm.onTreeInit = function () {
@@ -27,6 +31,15 @@
             vm.node = args.node;
             vm.node.selected = true;
         };
+        function init() {
+            languageResource.getAll()
+                .then(function (languages) {
+                    vm.languages = languages;
+                });
+        };
+
+        init();
+
     }
 
     angular.module('umbraco')
