@@ -1,12 +1,13 @@
 ﻿(function () {
     'use strict';
 
-    function controller(domainResource, notificationsService, overlayService, localizationService, eventsService) {
+    function controller(domainResource, editorService, notificationsService, overlayService, localizationService, eventsService) {
 
         var vm = this;
         vm.page = {};
         vm.domains = [];
 
+        vm.addDomain = addDomain;
         vm.deleteDomain = deleteDomain;
         vm.navigate = navigate;
         
@@ -17,6 +18,21 @@
 
             setPageName();
             loadDomains();
+        }
+
+        function addDomain() {
+            var dialog = {
+                view: "/App_Plugins/domains/backoffice/domains/overlays/create.html",
+                size: "small",
+                submit: function (model) {
+                    editorService.close();
+                },
+                close: function () {
+                    editorService.close();
+                }
+            };
+
+            editorService.open(dialog);
         }
 
         function deleteDomain(domain, event) {
