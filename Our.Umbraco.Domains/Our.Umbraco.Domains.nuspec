@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Our.Umbraco.Domains</id>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <authors>Erik-Jan Westendorp</authors>
     <owners>Erik-Jan Westendorp</owners>
     <license type="expression">MIT</license>
