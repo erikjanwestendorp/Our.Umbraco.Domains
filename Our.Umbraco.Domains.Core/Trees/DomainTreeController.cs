@@ -9,9 +9,9 @@ using Umbraco.Web.WebApi.Filters;
 namespace Our.Umbraco.Domains.Core.Trees
 {
     [Tree(
-        sectionAlias:Constants.Applications.Settings,
-        treeAlias: Static.Constants.Defaults.DomainsTreeAlias, 
-        TreeTitle = Static.Constants.Defaults.DomainsTreeTitle, 
+        sectionAlias: Constants.Applications.Settings,
+        treeAlias: Static.Constants.Defaults.DomainsTreeAlias,
+        TreeTitle = Static.Constants.Defaults.DomainsTreeTitle,
         TreeGroup = Constants.Trees.Groups.Settings)]
     [PluginController(areaName: Static.Constants.Defaults.DomainsAreaName)]
     public class DomainTreeController : TreeController

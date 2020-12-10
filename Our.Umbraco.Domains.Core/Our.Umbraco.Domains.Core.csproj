@@ -236,7 +236,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Composers\MappingsComposer.cs" />
+    <Compile Include="Compose\DomainsComposer.cs" />
+    <Compile Include="Compose\DomainsComponent.cs" />
     <Compile Include="Controllers\Backoffice\DomainController.cs" />
     <Compile Include="Mappings\ContentMappings.cs" />
     <Compile Include="Mappings\DomainMappings.cs" />
