@@ -6,7 +6,7 @@ This package gives you an easy overview of the domains used within your Umbraco 
 ## Install
 Use NuGet to install  Our.Umbraco.Domains:  
 ```powershell
-Install-Package Our.Umbraco.Domains -Version 1.0.2
+Install-Package Our.Umbraco.Domains 
 ```
 or
 
