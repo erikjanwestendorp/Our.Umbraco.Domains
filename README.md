@@ -16,5 +16,5 @@ Download the Umbraco Package from:
 https://our.umbraco.com/packages/backoffice-extensions/ourumbracodomains-domains-overview/
 
 ## Demo site Umbraco Backoffice Login Details
-Username: admin@admin.com  
+Username: admin@admin.com   
 Password: 0123456789 
