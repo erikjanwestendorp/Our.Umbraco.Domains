@@ -1,3 +1,9 @@
+resources:
+  pipelines:
+  - pipeline: azure-pipelines # Name of the pipeline resource
+    source: azure-pipelines.yml # Name of the pipeline referenced by the pipeline resource
+    trigger: true # Run app-ci pipeline when any run of security-lib-ci completes
+
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
