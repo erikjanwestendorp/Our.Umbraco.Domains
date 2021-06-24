@@ -1,8 +1,8 @@
 resources:
   pipelines:
   - pipeline: build
-    source: build # Name of the pipeline referenced by the pipeline resource
-    trigger: true # Run app-ci pipeline when any run of security-lib-ci completes
+    source: build 
+    trigger: true 
 
 steps:
 - script: echo Hello, world!
