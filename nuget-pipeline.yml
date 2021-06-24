@@ -1,7 +1,7 @@
 resources:
   pipelines:
-  - pipeline: azure-pipelines # Name of the pipeline resource
-    source: azure-pipelines # Name of the pipeline referenced by the pipeline resource
+  - pipeline: build # Name of the pipeline resource
+    source: build # Name of the pipeline referenced by the pipeline resource
     trigger: true # Run app-ci pipeline when any run of security-lib-ci completes
 
 steps:
