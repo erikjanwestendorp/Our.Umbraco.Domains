@@ -4,7 +4,7 @@ pool:
 resources:
   pipelines:
   - pipeline: build
-    source: build 
+    source: Build 
     trigger: true 
 
 steps:
