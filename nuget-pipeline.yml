@@ -8,3 +8,10 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
+- task: NuGetCommand@2
+  inputs:
+    command: pack
+    packagesToPack: '**/*.nuspec'
+
+- task: NuGetAuthenticate@0
+  displayName: 'NuGet Authenticate'
