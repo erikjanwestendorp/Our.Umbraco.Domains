@@ -11,6 +11,13 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
+- task: ExtractFiles@1
+  displayName: 'Unzip package to work directory'
+  inputs:
+    archiveFilePatterns: '$(Pipeline.Workspace)\build\our.umbraco.domains\Our.Umbraco.Domains.zip'
+    destinationFolder: '$(Pipeline.Workspace)\work'
+    cleanDestinationFolder: true
+
 - task: NuGetCommand@2
   inputs:
     command: pack
