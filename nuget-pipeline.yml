@@ -1,3 +1,6 @@
+pool:
+  vmImage: 'windows-latest'
+  
 resources:
   pipelines:
   - pipeline: build
