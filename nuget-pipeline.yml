@@ -15,7 +15,7 @@ steps:
 - task: ExtractFiles@1
   displayName: 'Unzip package to work directory'
   inputs:
-    archiveFilePatterns: '$(Pipeline.Workspace)\our.umbraco.domains\Our.Umbraco.Domains.zip'
+    archiveFilePatterns: '$(Pipeline.Workspace)\Build\our.umbraco.domains\Our.Umbraco.Domains.zip'
     destinationFolder: '$(Pipeline.Workspace)\work'
     cleanDestinationFolder: true
 
