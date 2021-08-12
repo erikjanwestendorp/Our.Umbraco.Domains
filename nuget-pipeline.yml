@@ -3,7 +3,8 @@ pool:
 
 resources:
   pipelines:
-  - pipeline: build
+  - pipeline: Build
+    project: Umbraco
     source: Build 
     trigger: true 
 
