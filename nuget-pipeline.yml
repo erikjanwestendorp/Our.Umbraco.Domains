@@ -1,6 +1,6 @@
 pool:
   vmImage: 'windows-latest'
-  
+
 resources:
   pipelines:
   - pipeline: build
@@ -14,7 +14,7 @@ steps:
 - task: NuGetCommand@2
   inputs:
     command: pack
-    packagesToPack: '**/*.csproj'
+    packagesToPack: '**/*.nuspec'
 
 - task: NuGetAuthenticate@0
   displayName: 'NuGet Authenticate'
