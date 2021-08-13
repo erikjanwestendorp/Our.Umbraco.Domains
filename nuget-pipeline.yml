@@ -12,6 +12,9 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
+- script: echo "Structure of work folder of this pipeline:" tree $(Agent.WorkFolder)\1 /f
+  displayName: structure
+
 - task: ExtractFiles@1
   displayName: 'Unzip package to work directory'
   inputs:
