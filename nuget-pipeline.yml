@@ -8,14 +8,10 @@ resources:
     source: Build 
     trigger: true 
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
 
-- script: echo "Structure of work folder of this pipeline:" 
-  tree $(Build.SourcesDirectory)
-  displayName: structure
-
+- task: NuGetAuthenticate@0
+  displayName: 'NuGet Authenticate'
+  
 - task: ExtractFiles@1
   displayName: 'Unzip package to work directory'
   inputs:
@@ -27,6 +23,3 @@ steps:
   inputs:
     command: pack
     packagesToPack: '**/*.nuspec'
-
-- task: NuGetAuthenticate@0
-  displayName: 'NuGet Authenticate'
