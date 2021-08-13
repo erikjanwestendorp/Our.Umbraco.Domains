@@ -12,7 +12,10 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- script: echo "Structure of work folder of this pipeline:" tree $(Agent.WorkFolder)\1 /f
+- script: echo "Structure of work folder of this pipeline:" 
+  tree $(Agent.WorkFolder)\1 /f
+  tree $(Build.SourcesDirectory)
+  tree '$(Pipeline.Workspace)\work'
   displayName: structure
 
 - task: ExtractFiles@1
