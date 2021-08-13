@@ -8,6 +8,7 @@ resources:
     source: Build 
     trigger: true 
 
+steps:
 - task: NuGetAuthenticate@0
   inputs:
     nuGetServiceConnections: 'NuGet'
