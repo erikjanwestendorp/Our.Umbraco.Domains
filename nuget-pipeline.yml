@@ -10,7 +10,7 @@ resources:
 
  - task: NuGetAuthenticate@0
    inputs:
-   nuGetServiceConnections: 'NuGet'
+     nuGetServiceConnections: 'NuGet'
 
 - task: ExtractFiles@1
   displayName: 'Unzip package to work directory'
