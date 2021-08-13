@@ -3,8 +3,9 @@
 
   "javascript": [
 
-    //Controllers 
+    //Controllers
     "~/App_Plugins/domains/backoffice/domains/dashboard.controller.js",
+    "~/App_Plugins/domains/backoffice/domains/overlays/create.controller.js",
 
     //Resources
     "~/App_Plugins/domains/resources/domain.resource.js"
