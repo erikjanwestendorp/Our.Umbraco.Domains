@@ -8,9 +8,9 @@ resources:
     source: Build 
     trigger: true 
 
- - task: NuGetAuthenticate@0
-   inputs:
-     nuGetServiceConnections: 'NuGet'
+- task: NuGetAuthenticate@0
+  inputs:
+    nuGetServiceConnections: 'NuGet'
 
 - task: ExtractFiles@1
   displayName: 'Unzip package to work directory'
