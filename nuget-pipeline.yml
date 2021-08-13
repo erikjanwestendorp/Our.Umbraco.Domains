@@ -15,7 +15,7 @@ steps:
 - task: ExtractFiles@1
   displayName: 'Unzip package to work directory'
   inputs:
-    archiveFilePatterns: '$(Pipeline.Workspace)$(Build.SourcesDirectory)'
+    archiveFilePatterns: '$(Build.SourcesDirectory)'
     destinationFolder: '$(Pipeline.Workspace)\work'
     cleanDestinationFolder: true
 
