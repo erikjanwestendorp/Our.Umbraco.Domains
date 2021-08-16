@@ -1,0 +1,27 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <PropertyGroup>
+        <Our.Umbraco.DomainsContentFilesPath>$(MSBuildThisFileDirectory)..\App_Plugins\Our.Umbraco.Domains\**\*.*</Our.Umbraco.DomainsContentFilesPath>
+    </PropertyGroup>
+
+    <Target Name="CopyOur.Umbraco.DomainsAssets" BeforeTargets="Build">
+        <ItemGroup>
+            <Our.Umbraco.DomainsContentFiles Include="$(Our.Umbraco.DomainsContentFilesPath)" />
+        </ItemGroup>
+        <Message Text="Copying Our.Umbraco.Domains files: $(Our.Umbraco.DomainsContentFilesPath) - #@(Our.Umbraco.DomainsContentFiles->Count()) files"  Importance="high" />
+        <Copy
+            SourceFiles="@(Our.Umbraco.DomainsContentFiles)"
+            DestinationFiles="@(Our.Umbraco.DomainsContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\Our.Umbraco.Domains\%(RecursiveDir)%(Filename)%(Extension)')"
+            SkipUnchangedFiles="true" />
+
+    </Target>
+
+    <Target Name="ClearOur.Umbraco.DomainsAssets" BeforeTargets="Clean">
+        <ItemGroup>
+            <Our.Umbraco.DomainsDir Include="$(MSBuildProjectDirectory)\App_Plugins\Our.Umbraco.Domains\" />
+        </ItemGroup>
+        <Message Text="Clear old Our.Umbraco.Domains data"  Importance="high" />
+        <RemoveDir Directories="@(Our.Umbraco.DomainsDir)"  />
+    </Target>
+
+</Project>
