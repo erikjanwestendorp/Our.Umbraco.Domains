@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Our.Umbraco.Domains", "Our.Umbraco.Domains\Our.Umbraco.Domains.csproj", "{BBD4F32D-DC42-4C93-A85D-5AC2F2623CC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Our.Umbraco.Domains", "Our.Umbraco.Domains\Our.Umbraco.Domains.csproj", "{BBD4F32D-DC42-4C93-A85D-5AC2F2623CC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Our.Umbraco.Domains.Site", "Our.Umbraco.Domains.Site\Our.Umbraco.Domains.Site.csproj", "{FE77F443-706B-40E2-B905-1A00C5BA3801}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BBD4F32D-DC42-4C93-A85D-5AC2F2623CC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBD4F32D-DC42-4C93-A85D-5AC2F2623CC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBD4F32D-DC42-4C93-A85D-5AC2F2623CC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE77F443-706B-40E2-B905-1A00C5BA3801}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE77F443-706B-40E2-B905-1A00C5BA3801}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE77F443-706B-40E2-B905-1A00C5BA3801}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE77F443-706B-40E2-B905-1A00C5BA3801}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
