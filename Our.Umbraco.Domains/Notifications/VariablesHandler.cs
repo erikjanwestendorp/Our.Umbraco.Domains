@@ -19,7 +19,7 @@ namespace Our.Umbraco.Domains.Notifications
         {
             notification.ServerVariables.Add(Static.Constants.Package.Name, new Dictionary<string, object>
             {
-                {Static.Constants.Keys.DomainsOverview, _linkGenerator.GetUmbracoApiServiceBaseUrl<DomainController>(controller => controller.ControllerContext)}
+                {Static.Constants.Keys.DomainsOverview, _linkGenerator.GetUmbracoApiServiceBaseUrl<DomainController>(controller => controller.GetDomains())}
             });
         }
     }

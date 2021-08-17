@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language alias="en_us" intName="English (US)" localName="English (US)" lcid="" culture="en-US">
+  <creator>
+    <name>Erik-Jan Westendorp</name>
+    <link>https://www.erikjanwestendorp.nl</link>
+  </creator>
+  <area alias="default">
+    <key alias="domain">Domain</key>
+    <key alias="domains">Domains</key>
+    <key alias="node">Node</key>
+    <key alias="culture">Culture</key>
+  </area>
+  <area alias="messages">
+    <key alias="domainDeleteWarning">This will delete the domain</key>
+  </area>
+</language>
