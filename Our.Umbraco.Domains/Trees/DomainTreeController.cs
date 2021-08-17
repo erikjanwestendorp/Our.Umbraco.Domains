@@ -13,7 +13,8 @@ namespace Our.Umbraco.Domains.Trees
         sectionAlias: Constants.Applications.Settings,
         treeAlias: Static.Constants.Defaults.DomainsTreeAlias,
         TreeTitle = Static.Constants.Defaults.DomainsTreeTitle,
-        TreeGroup = Constants.Trees.Groups.Settings)]
+        TreeGroup = Constants.Trees.Groups.Settings,
+        SortOrder = 12)]
     [PluginController(areaName: Static.Constants.Defaults.DomainsAreaName)]
     public class DomainTreeController : TreeController
     {
