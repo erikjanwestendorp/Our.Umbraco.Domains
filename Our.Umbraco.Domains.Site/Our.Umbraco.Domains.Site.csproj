@@ -42,6 +42,9 @@
         <Content Remove="umbraco\MediaCache\**" />
         <Content Remove="umbraco\models\**" />
     </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Our.Umbraco.Domains\Our.Umbraco.Domains.csproj" />
+    </ItemGroup>
 
     <!--Set this to true ModelsBuilder mode is not PureLive -->
     <PropertyGroup>
