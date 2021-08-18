@@ -1,7 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    function domainResource($http, $q, umbRequestHelper ) {
+    function domainResource($http, $q ) {
         var service = {
             getAll: getAll,
             deleteById: deleteById
