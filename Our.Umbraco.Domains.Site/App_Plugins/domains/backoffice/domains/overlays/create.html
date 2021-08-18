@@ -1,0 +1,65 @@
+﻿<div ng-controller="Domains.Overlays.CreateController as vm" class="form-horizontal">
+
+    <umb-editor-view>
+
+        <umb-editor-header name="'Add Domain'"
+                           name-locked="true"
+                           hide-alias="true"
+                           hide-icon="true"
+                           hide-description="true">
+        </umb-editor-header>
+
+        <umb-editor-container>
+            <umb-box>
+                <umb-box-content>
+
+                    <umb-control-group label="Hostname">
+                        <input type="text"
+                               class="umb-property-editor umb-textstring"
+                               ng-model="vm.hostname" />
+                    </umb-control-group>
+
+                    <umb-control-group label="Node">
+                        <umb-tree section="content"
+                                  hideheader="true"
+                                  hideoptions="true"
+                                  api="vm.dialogTreeApi"
+                                  on-init="vm.onTreeInit()"
+                                  enablelistviewexpand="true"
+                                  isdialog="true"
+                                  enablecheckboxes="true">
+                        </umb-tree>
+                    </umb-control-group>
+
+                    <umb-control-group label="Language">
+                        <select name="language"
+                                ng-model="vm.language"
+                                ng-options="lang.name for lang in vm.languages"
+                                required>
+                        </select>
+                    </umb-control-group>
+
+                </umb-box-content>
+            </umb-box>
+        </umb-editor-container>
+
+        <umb-editor-footer>
+            <umb-editor-footer-content-right>
+                <umb-button type="button"
+                            button-style="link"
+                            label-key="general_close"
+                            shortcut="esc"
+                            action="vm.close()">
+                </umb-button>
+
+                <umb-button type="button"
+                            button-style="action"
+                            label-key="general_submit"
+                            action="vm.save()">
+                </umb-button>
+            </umb-editor-footer-content-right>
+        </umb-editor-footer>
+
+    </umb-editor-view>
+
+</div>

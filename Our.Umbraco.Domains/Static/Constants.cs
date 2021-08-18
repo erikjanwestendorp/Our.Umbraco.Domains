@@ -19,6 +19,7 @@
         public static class Package
         {
             public const string Name = "Our.Umbraco.Domains";
+            public const string Alias = "ourUmbracoDomains";
         }
 
         public static class Keys

@@ -17,7 +17,7 @@ namespace Our.Umbraco.Domains.Notifications
 
         public void Handle(ServerVariablesParsingNotification notification)
         {
-            notification.ServerVariables.Add(Static.Constants.Package.Name, new Dictionary<string, object>
+            notification.ServerVariables.Add(Static.Constants.Package.Alias, new Dictionary<string, object>
             {
                 {Static.Constants.Keys.DomainsOverview, _linkGenerator.GetUmbracoApiServiceBaseUrl<DomainController>(controller => controller.GetDomains())}
             });
