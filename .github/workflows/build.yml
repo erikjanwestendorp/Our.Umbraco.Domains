@@ -1,4 +1,4 @@
-name: v9-vuild
+name: v9-build
 
 on:
   pull_request:
