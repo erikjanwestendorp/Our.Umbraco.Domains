@@ -18,4 +18,3 @@ https://our.umbraco.com/packages/backoffice-extensions/ourumbracodomains-domains
 ## Demo site Umbraco Backoffice Login Details
 Username: admin@admin.com   
 Password: 0123456789
-
