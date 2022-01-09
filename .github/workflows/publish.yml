@@ -1,6 +1,37 @@
 name: publish to nuget
 on: 
-  push:
-    branches:
-      - main
+  workflow_dispatch
+  #push:
+    #branches:
+      #- main
       
+jobs:
+  publish:
+    name: build, pack & publish
+    runs-on: windows-latest
+    steps: 
+    - uses: actions/checkout@v2
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+        
+    - name: Restore dependencies
+      run: dotnet restore
+      
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+      
+    - name: Publish on version change
+      id: publish_nuget
+      uses: rohith/publish-nuget@v2
+      with:
+          # Filepath of the project to be packaged, relative to root of repository
+          PROJECT_FILE_PATH: Our.Umbraco.Domains/Our.Umbraco.Domains.csproj
+          
+          # Regex pattern to extract version info in a capturing group
+          VERSION_REGEX: ^\s*<PackageVersion>(.*)<\/PackageVersion>\s*$
+        
+          # API key to authenticate with NuGet server
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
