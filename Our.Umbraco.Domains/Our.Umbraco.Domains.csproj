@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
         <ContentTargetFolders>.</ContentTargetFolders>
@@ -8,6 +8,12 @@
         <Description>...</Description>
         <Product>...</Product>
         <PackageTags>umbraco plugin package</PackageTags>
+	    <Copyright>Copyright 2022</Copyright>
+	    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+	    <PackageVersion>9.0.0-alpha</PackageVersion>
+	    <Version>$(PackageVersion)</Version>
+
     </PropertyGroup>
 
     <ItemGroup>
